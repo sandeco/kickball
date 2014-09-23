@@ -37,6 +37,7 @@ public class Bola extends GameObject {
 	public void draw(Canvas canvas) {
 		paint.setColor(Color.GREEN);
 		canvas.drawCircle(x, y, raio, paint);
+		
 	}
 
 }
