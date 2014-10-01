@@ -2,6 +2,7 @@ package com.kickball;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.view.MotionEvent;
 
 public class KickBallController extends GameController{
 
@@ -15,8 +16,9 @@ public class KickBallController extends GameController{
 
 	public KickBallController(Context context) {
 		super(context);
-		bola = new Bola();
-		fundo = new Fundo();
+		bola  = new Bola(context);
+		fundo = new Fundo(context);
+		
 	}
 
 
@@ -32,5 +34,13 @@ public class KickBallController extends GameController{
 		fundo.draw(canvas);
 		bola.draw(canvas);
 	}
+
+
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		bola.inverterY();
+		return super.onTouchEvent(event);
+	}
+
 	
 }

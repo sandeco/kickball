@@ -1,10 +1,15 @@
 package com.kickball;
 
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 
 public class Fundo extends GameObject {
+
+	public Fundo(Context context) {
+		super(context);
+	}
 
 	Paint paint = new Paint();
 	
