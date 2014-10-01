@@ -6,6 +6,8 @@ import android.view.View;
 
 public abstract class GameObject extends View{
 	
+	
+	
 	public GameObject(Context context) {
 		super(context);
 	}
