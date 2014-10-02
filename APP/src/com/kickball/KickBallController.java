@@ -10,40 +10,40 @@ public class KickBallController extends GameController{
 	/**
 	 * OBJETOS DO JOGO * 
 	 *  */	
-	private Bola bola;
-	private Fundo fundo;
 	private Boneco boneco;
+	private Bola bola;
 	
-
+	
 	public KickBallController(Context context) {
 		super(context);
-		bola  = new Bola(context);
-		fundo = new Fundo(context);
-		boneco = new Boneco(context);
 		
 	}
 
 
 	@Override
-	public void stepObjects(Canvas canvas) {
-		fundo.step(canvas);
-		bola.step(canvas);
-	}
+	public void onStart() {
+		
+		setBg(new BackGround(getContext(),0,0,0));
+		
+		
+		bola = new Bola(getContext(), 50, 50, 1);
+		gameObjects.add(bola);
+		
+		boneco = new Boneco(getContext(),50,50,2);
+		gameObjects.add(boneco);
+		
 
-	
-	@Override
-	public void drawObjects(Canvas canvas) {
-		fundo.draw(canvas);
-		bola.draw(canvas);
-		boneco.draw(canvas);
 	}
+	
+		
+	
 
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		bola.inverterY();
 		return super.onTouchEvent(event);
 	}
 
-	
+
+
 }

@@ -3,57 +3,47 @@ package com.kickball;
 import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.widget.ImageView;
 
 public class Bola extends GameObject {
 
-	private ImageView image;
+	
 	private int raio = 50;
-	private int passoX = 5;
-	private int passoY = 5;
-	Paint paint = new Paint();
 	
-	
-	public Bola(Context context) {
-		super(context);
+	public Bola(Context context, int x, int y, int z) {
+		super(context, x, y, z);
 		
-			x = raio;
-			y = raio;
-			this.setX(x);
-			this.setY(y);
+	}
 
-			image = new ImageView(context);
-			image.setImageBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.ic_launcher));
+	@Override
+	protected void onStart() {
+		
+		
 	}
 
 	
-	
 	@Override
 	public void step(Canvas canvas) {
-
-		x = x+passoX;
-		y = y+passoY;
 		
-		this.setX(x);
-		this.setY(y);
-
-		if(x<raio || x>= (canvas.getWidth()-raio/2))
-			passoX = passoX*(-1);
-		if(y<raio || y>= (canvas.getHeight()-raio/2))
-			passoY = passoY*(-1);
+		/*
+		incrementX();
+		incrementY();
 		
+		if(getX()<raio || getX()>= (canvas.getWidth()-raio/2))
+			invertXSpeed();
+		if(getY()<raio || getY()>= (canvas.getHeight()-raio/2))
+			invertYSpeed();
+		*/
 	}
 
 	@Override
 	public void draw(Canvas canvas) {		
-		canvas.drawBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.ic_launcher), x, y, null);		
+		canvas.drawBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.ic_launcher), getX(), getY(), null);		
 	}
 
 
-	public void inverterY(){
-		passoY = passoY * (-1);
-	}
+
+
+
 	
 
 }

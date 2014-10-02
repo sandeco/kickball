@@ -5,14 +5,16 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 
-public class Fundo extends GameObject {
-
+public class BackGround extends GameObject{
 	
+	
+	public BackGround(Context context, int x, int y, int z) {
+		super(context, x, y, z);
+		// TODO Auto-generated constructor stub
+	}
+
 	Paint paint = new Paint();
 	
-	public Fundo(Context context, int x, int y , int z) {
-		super(context, x, y, z);
-	}
 
 	@Override
 	protected void onStart() {
@@ -28,7 +30,7 @@ public class Fundo extends GameObject {
 
 	@Override
 	public void draw(Canvas canvas) {
-		//canvas.drawColor(Color.BLACK);
+		canvas.drawColor(Color.WHITE);
 	}
 
 
