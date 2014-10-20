@@ -29,7 +29,7 @@ public class BackGround extends GameObject{
 	}
 
 	@Override
-	public void draw(Canvas canvas) {
+	public void onDraw(Canvas canvas) {
 		canvas.drawColor(Color.WHITE);
 	}
 

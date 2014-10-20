@@ -26,7 +26,8 @@ public abstract class GameObject extends View{
 	}
 
 	public abstract void step(Canvas canvas);
-	public abstract void draw(Canvas canvas);
+	public abstract void onDraw(Canvas canvas);
+	
 
 	protected abstract void onStart();
 	

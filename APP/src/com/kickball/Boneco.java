@@ -3,6 +3,7 @@ package com.kickball;
 import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.view.MotionEvent;
 
 public class Boneco extends GameObject {
 
@@ -41,15 +42,22 @@ public class Boneco extends GameObject {
 		setAlpha(100);
 		*/
 		
-		setZ(10);
+		setZ(0);
 	}
 
 
 	@Override
-	public void draw(Canvas canvas) {
-		
-		sprite.draw(canvas, Sprite.DOWN, 1, 100);
+	public void onDraw(Canvas canvas) {		
+		sprite.draw(canvas, Sprite.DOWN, 1, 255); // alpha 0 - 255
 	}
 
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		// TODO Auto-generated method stub
+		return super.onTouchEvent(event);
+	}
+
+	
+	
 	
 }

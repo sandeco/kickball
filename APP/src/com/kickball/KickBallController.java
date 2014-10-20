@@ -11,7 +11,7 @@ public class KickBallController extends GameController{
 	 * OBJETOS DO JOGO * 
 	 *  */	
 	private Boneco boneco;
-	private Bola bola;
+	
 	
 	
 	public KickBallController(Context context) {
@@ -24,26 +24,12 @@ public class KickBallController extends GameController{
 	public void onStart() {
 		
 		setBg(new BackGround(getContext(),0,0,0));
-		
-		
-		bola = new Bola(getContext(), 50, 50, 1);
-		gameObjects.add(bola);
-		
+			
 		boneco = new Boneco(getContext(),50,50,2);
 		gameObjects.add(boneco);
 		
 
 	}
 	
-		
-	
-
-
-	@Override
-	public boolean onTouchEvent(MotionEvent event) {
-		return super.onTouchEvent(event);
-	}
-
-
 
 }

@@ -7,19 +7,14 @@ import android.view.Menu;
 public class MainActivity extends Activity {
 
 	KickBallController kickball;
-	
-	
+		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
 		kickball = new KickBallController(this);
-		
-		
 		setContentView(kickball);
 	}
-
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
