@@ -1,19 +1,17 @@
 package com.kickball.game;
 
-import com.kickball.engine.GameObject;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
+
+import com.kickball.engine.GameObject;
 
 public class Fundo extends GameObject {
 
-	public Fundo(Context context) {
-		super(context);
-	}
+	public Fundo(Context context, int x, int y) {
+		super(context, x, y);
 
-	Paint paint = new Paint();
+	}
 	
 	@Override
 	public void step(Canvas canvas) {
@@ -22,7 +20,6 @@ public class Fundo extends GameObject {
 
 	@Override
 	public void draw(Canvas canvas) {
-		//pinta toda a tela de preto
 		canvas.drawColor(Color.BLACK);
 	}
 

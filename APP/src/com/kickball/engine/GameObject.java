@@ -6,16 +6,24 @@ import android.graphics.Rect;
 import android.view.View;
 
 public abstract class GameObject extends View{
-	
-	public GameObject(Context context) {
-		super(context);
-	}
+
 	
 	protected int x;
 	protected int y;
 	
 	protected int width;
 	protected int height;
+
+	
+	
+	public GameObject(Context context, int x, int y) {
+		super(context);
+		
+		this.x = x;
+		this.y = y;
+		
+	}
+	
 	
 	public abstract void step(Canvas canvas);
 	public abstract void draw(Canvas canvas);

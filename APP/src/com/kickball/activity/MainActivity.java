@@ -16,9 +16,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		kickball = new KickBallController(this);
-		
-		
+		kickball = new KickBallController(this);				
 		setContentView(kickball);
 	}
 
