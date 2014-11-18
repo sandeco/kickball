@@ -1,4 +1,7 @@
-package com.kickball;
+package com.kickball.activity;
+
+import com.kickball.R;
+import com.kickball.game.KickBallController;
 
 import android.app.Activity;
 import android.os.Bundle;

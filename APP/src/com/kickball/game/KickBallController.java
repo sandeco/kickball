@@ -1,4 +1,6 @@
-package com.kickball;
+package com.kickball.game;
+
+import com.kickball.engine.GameController;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -12,14 +14,12 @@ public class KickBallController extends GameController{
 	 *  */	
 	private Bola bola;
 	private Fundo fundo;
-	private Boneco boneco;
-	
 
+	
 	public KickBallController(Context context) {
 		super(context);
 		bola  = new Bola(context);
 		fundo = new Fundo(context);
-		boneco = new Boneco(context);
 		
 	}
 
@@ -34,8 +34,7 @@ public class KickBallController extends GameController{
 	@Override
 	public void drawObjects(Canvas canvas) {
 		fundo.draw(canvas);
-		bola.draw(canvas);
-		boneco.draw(canvas);
+		bola.draw(canvas);		
 	}
 
 

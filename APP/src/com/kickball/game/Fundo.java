@@ -1,4 +1,6 @@
-package com.kickball;
+package com.kickball.game;
+
+import com.kickball.engine.GameObject;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -1,4 +1,4 @@
-package com.kickball;
+package com.kickball.game;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
