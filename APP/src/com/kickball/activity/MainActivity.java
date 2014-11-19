@@ -5,15 +5,18 @@ import android.os.Bundle;
 import android.view.Menu;
 
 import com.kickball.R;
+import com.kickball.game.KickBallController;
 
 public class MainActivity extends Activity {
 
 	
+	private KickBallController kickBall;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		
+		kickBall = new KickBallController(this);
+		setContentView(kickBall);
 	}
 
 
@@ -22,7 +25,7 @@ public class MainActivity extends Activity {
 	protected void onResume() {
 		super.onResume();
 		
-		//kickball.resume();
+		kickBall.resume();
 		
 	}
 
